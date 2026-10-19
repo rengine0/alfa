@@ -5,9 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ALFA | Finanças com IA e apoio humano</title>
   <meta name="description" content="A ALFA organiza suas finanças com inteligência artificial e acompanha você de perto com apoio humano.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#000000">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <script>
     try {
       var t = localStorage.getItem('alfa-tema');
@@ -36,7 +41,16 @@
 
   <header class="topo">
     <div class="container">
-      <a class="logo" href="#inicio">ALFA<span class="ponto" aria-hidden="true"></span></a>
+      <a class="logo" href="#inicio" aria-label="Projeto ALFA. Construindo a liberdade do amanhã.">
+        <img class="logo-simbolo logo-simbolo-claro" src="img/simbolo-claro.png" alt="" width="88" height="79">
+        <img class="logo-simbolo logo-simbolo-escuro" src="img/simbolo-escuro.png" alt="" width="88" height="79">
+        <span class="logo-divisor" aria-hidden="true"></span>
+        <span class="logo-texto">
+          <span class="logo-projeto">Projeto</span>
+          <span class="logo-nome">ALFA</span>
+          <span class="logo-frase">Construindo a liberdade do amanhã.</span>
+        </span>
+      </a>
       <nav aria-label="Principal">
         <a href="#proposta">Proposta</a>
         <a href="#quem-faz">Quem faz</a>
@@ -86,14 +100,14 @@
         <h2 class="secao">Quem faz a ALFA</h2>
         <div class="autores">
           <article class="autor">
-            <div class="avatar" aria-hidden="true">R</div>
+            <img class="avatar" src="img/rodrigo.webp" alt="Foto de Rodrigo" width="160" height="160" loading="lazy">
             <div>
               <h3>Rodrigo</h3>
               <p>Cuida da tecnologia. Constrói a IA que organiza e analisa suas finanças.</p>
             </div>
           </article>
           <article class="autor">
-            <div class="avatar" aria-hidden="true">V</div>
+            <img class="avatar" src="img/vinicius.webp" alt="Foto de Vinicius" width="160" height="160" loading="lazy">
             <div>
               <h3>Vinicius</h3>
               <p>Cuida do acompanhamento. Conversa com você, explica os números e ajuda a decidir.</p>
@@ -107,8 +121,8 @@
 
   <footer class="rodape">
     <div class="container">
-      <span class="logo-rodape">ALFA</span>
-      <span>Finanças com IA e apoio humano. &copy; 2026</span>
+      <span class="logo-rodape"><img src="img/simbolo-escuro.png" alt="" width="34" height="31">ALFA</span>
+      <span class="rodape-links"><a href="privacidade.html">Política de Privacidade</a><span>Finanças com IA e apoio humano. &copy; 2026</span></span>
     </div>
   </footer>
 

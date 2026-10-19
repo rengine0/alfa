@@ -457,3 +457,95 @@ html { scrollbar-color: var(--laranja) var(--bg); }
   .linha-provedor { grid-template-columns: 1fr; gap: 0; }
   .rem-provedor { justify-self: start; margin-bottom: 1.25rem; }
 }
+
+/* =====================================================
+   Logo da Projeto ALFA: símbolo | nome | frase
+   ===================================================== */
+.topo .container { padding-top: 1.5rem; }
+.topo .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-family: "Montserrat", var(--sans);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: normal;
+  line-height: 1;
+}
+.logo-simbolo { display: block; width: 88px; height: auto; flex: none; }
+.logo-simbolo-escuro { display: none; }
+:root[data-tema="escuro"] .logo-simbolo-claro { display: none; }
+:root[data-tema="escuro"] .logo-simbolo-escuro { display: block; }
+
+.logo-divisor { align-self: stretch; width: 1px; margin: 0.35rem 0; background: var(--fio); opacity: 0.6; }
+
+.logo-texto { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+.logo-projeto { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.7em; text-transform: uppercase; padding-left: 0.1em; }
+.logo-nome { font-size: 3rem; font-weight: 500; letter-spacing: 0.32em; margin-right: -0.32em; line-height: 0.95; }
+.logo-frase { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--laranja); }
+
+.logo-rodape { display: inline-flex; align-items: center; gap: 0.6rem; }
+.logo-rodape img { display: block; width: 34px; height: auto; }
+
+@media (max-width: 520px) {
+  .topo .logo { gap: 1rem; }
+  .logo-simbolo { width: 60px; }
+  .logo-nome { font-size: 2.1rem; }
+  .logo-projeto { font-size: 0.65rem; letter-spacing: 0.5em; }
+  .logo-frase { font-size: 0.5rem; letter-spacing: 0.1em; }
+}
+
+/* Fotos nos círculos de Rodrigo e Vinicius */
+img.avatar {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  background: var(--avatar-bg);
+  border: 3px solid var(--laranja);
+}
+
+/* Botão de WhatsApp na confirmação */
+.confirmacao-zap { margin-top: 1.25rem; }
+.botao-zap { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 0; padding: 0.85rem 1.75rem; }
+.botao-zap svg { width: 1.4rem; height: 1.4rem; flex: none; }
+.confirmacao a.botao-zap { color: #000000; text-decoration: none; }
+.confirmacao a.botao-zap:hover { color: var(--laranja); background: var(--bg); }
+
+/* =====================================================
+   Política de Privacidade
+   ===================================================== */
+.rodape-links { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; justify-content: flex-end; }
+.rodape-links a { color: var(--bloco-fg); font-weight: 600; text-underline-offset: 3px; text-decoration-color: var(--laranja); text-decoration-thickness: 2px; }
+.formulario > .dica a { color: var(--fg); font-weight: 600; text-underline-offset: 3px; text-decoration-color: var(--laranja); text-decoration-thickness: 2px; }
+
+.politica h2 { font-size: 1.3rem; line-height: 1.3; margin: 2.25rem 0 0.75rem; padding-top: 1.25rem; border-top: 1px solid var(--fio); scroll-margin-top: 1rem; }
+.politica .linha-fina + .atualizacao { margin-top: 1rem; }
+.politica .atualizacao { font-size: 0.85rem; font-weight: 600; }
+.politica p { margin-top: 0.75rem; max-width: 68ch; }
+.politica .linha-fina { max-width: 62ch; }
+.politica ul { margin: 0.75rem 0 0; padding-left: 1.25rem; max-width: 68ch; }
+.politica li { margin-top: 0.45rem; }
+.politica li::marker { color: var(--laranja); }
+.politica a { color: var(--fg); font-weight: 600; text-underline-offset: 3px; text-decoration-color: var(--laranja); text-decoration-thickness: 2px; }
+.politica .principal-h1, .politica h1 { max-width: none; }
+
+.cartao-dpo { margin-top: 0.75rem; padding: 1.25rem 1.5rem; max-width: 68ch; border: 1px solid var(--fio); border-left: 4px solid var(--laranja); background: var(--realce); }
+.cartao-dpo h3 { font-size: 1.2rem; }
+.cartao-dpo .cargo { margin-top: 0.1rem; font-size: 0.85rem; font-weight: 600; color: var(--texto2); }
+.politica .contatos { list-style: none; padding: 0; margin-top: 0.9rem; }
+.contatos li { display: flex; gap: 1rem; margin-top: 0.35rem; }
+.contatos li > span:first-child { flex: none; width: 5.5rem; font-size: 0.85rem; font-weight: 600; color: var(--texto2); }
+
+.pendente { padding: 0.05rem 0.4rem; background: var(--laranja); color: #000000; font-size: 0.85em; font-weight: 600; }
+
+.indice { display: flex; flex-direction: column; position: sticky; top: 1rem; }
+.indice a { padding: 0.5rem 0.5rem 0.5rem 0; border-top: 1px solid var(--fio); color: var(--fg); text-decoration: none; font-size: 0.925rem; font-weight: 600; transition: padding-left 0.2s, background 0.2s, box-shadow 0.2s; }
+.indice a:first-child { border-top: 0; }
+.indice a:hover { padding-left: 0.75rem; background: var(--realce); box-shadow: inset 3px 0 0 var(--laranja); }
+
+@media (max-width: 800px) {
+  .indice { position: static; }
+  .rodape-links { justify-content: flex-start; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}

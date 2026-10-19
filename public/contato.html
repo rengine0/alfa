@@ -5,9 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fale com a gente | ALFA</title>
   <meta name="description" content="Conte para a ALFA como está o seu negócio. Respondemos pelo WhatsApp.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#000000">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <script>
     try {
       var t = localStorage.getItem('alfa-tema');
@@ -36,7 +41,16 @@
 
   <header class="topo">
     <div class="container">
-      <a class="logo" href="index.html#inicio">ALFA<span class="ponto" aria-hidden="true"></span></a>
+      <a class="logo" href="index.html#inicio" aria-label="Projeto ALFA. Construindo a liberdade do amanhã.">
+        <img class="logo-simbolo logo-simbolo-claro" src="img/simbolo-claro.png" alt="" width="88" height="79">
+        <img class="logo-simbolo logo-simbolo-escuro" src="img/simbolo-escuro.png" alt="" width="88" height="79">
+        <span class="logo-divisor" aria-hidden="true"></span>
+        <span class="logo-texto">
+          <span class="logo-projeto">Projeto</span>
+          <span class="logo-nome">ALFA</span>
+          <span class="logo-frase">Construindo a liberdade do amanhã.</span>
+        </span>
+      </a>
       <nav aria-label="Principal">
         <a href="index.html#proposta">Proposta</a>
         <a href="index.html#quem-faz">Quem faz</a>
@@ -134,13 +148,19 @@
 
             <button class="botao" id="btn-enviar" type="submit">Enviar mensagem</button>
             <p class="erro erro-envio" id="erro-envio" role="alert" hidden></p>
-            <p class="dica">Ao enviar, sua mensagem passa por uma análise da nossa IA e chega para Rodrigo e Vinicius. Depois respondemos pelo WhatsApp.</p>
+            <p class="dica">Ao enviar, sua mensagem passa por uma análise da nossa IA e chega para Rodrigo e Vinicius. Depois respondemos pelo WhatsApp. Veja como tratamos seus dados na <a href="privacidade.html">Política de Privacidade</a>.</p>
           </form>
 
           <div id="confirmacao" class="confirmacao" hidden tabindex="-1">
             <h2>Mensagem enviada!</h2>
             <p>Recebemos os dados do seu negócio. A IA já organizou as informações e Rodrigo e Vinicius vão avaliar o seu caso.</p>
             <p>Respondemos pelo WhatsApp que você informou. Seu protocolo: <strong id="protocolo"></strong>.</p>
+            <p class="confirmacao-zap">
+              <a id="btn-whatsapp" class="botao botao-zap" href="https://wa.me/5564992474135" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
+                Conversar no WhatsApp
+              </a>
+            </p>
             <p><a href="index.html">Voltar para a página inicial</a></p>
           </div>
         </article>
@@ -168,8 +188,8 @@
 
   <footer class="rodape">
     <div class="container">
-      <span class="logo-rodape">ALFA</span>
-      <span>Finanças com IA e apoio humano. &copy; 2026</span>
+      <span class="logo-rodape"><img src="img/simbolo-escuro.png" alt="" width="34" height="31">ALFA</span>
+      <span class="rodape-links"><a href="privacidade.html">Política de Privacidade</a><span>Finanças com IA e apoio humano. &copy; 2026</span></span>
     </div>
   </footer>
 

@@ -9,6 +9,8 @@
   var btnAddProv = document.getElementById('add-provedor');
   var blocoLibera = document.getElementById('bloco-libera');
   var chkLibera = document.getElementById('libera-provedores');
+  var btnWhatsapp = document.getElementById('btn-whatsapp');
+  var WHATSAPP_ALFA = '5564992474135';
 
   var campos = {
     empresa: document.getElementById('empresa'),
@@ -242,6 +244,14 @@
     };
   }
 
+  // Link wa.me com mensagem pronta: nome da pessoa, protocolo e nome da ALFA.
+  function montarLinkWhatsapp(nome, protocolo) {
+    var texto = 'Olá! Meu nome é ' + nome + '.' +
+      (protocolo ? ' Meu protocolo é ' + protocolo + '.' : '') +
+      ' Acabei de enviar o formulário no site da Projeto ALFA e gostaria de conversar.';
+    return 'https://wa.me/' + WHATSAPP_ALFA + '?text=' + encodeURIComponent(texto);
+  }
+
   function mostrarErroEnvio(msg) {
     erroEnvio.textContent = msg;
     erroEnvio.hidden = false;
@@ -275,7 +285,9 @@
       })
       .then(function (res) {
         if (res.status === 200 && res.corpo.ok) {
-          document.getElementById('protocolo').textContent = res.corpo.protocolo ? '#' + res.corpo.protocolo : '—';
+          var protocolo = res.corpo.protocolo ? '#' + res.corpo.protocolo : '';
+          document.getElementById('protocolo').textContent = protocolo || '—';
+          btnWhatsapp.href = montarLinkWhatsapp(campos.responsavel.value.trim(), protocolo);
           form.hidden = true;
           confirmacao.hidden = false;
           confirmacao.focus();
