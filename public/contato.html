@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fale com a gente | ALFA</title>
+  <meta name="description" content="Conte para a ALFA como está o seu negócio. Respondemos pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <script>
+    try {
+      var t = localStorage.getItem('alfa-tema');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro';
+      document.documentElement.setAttribute('data-tema', t);
+    } catch (e) { document.documentElement.setAttribute('data-tema', 'claro'); }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="faixa">
+    <div class="container">
+      <span class="faixa-texto">Finanças com IA e apoio humano</span>
+
+      <div class="tema">
+
+        <svg class="icone icone-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+
+        <button id="tema-btn" class="tema-btn" type="button" role="switch" aria-checked="false" aria-label="Alternar entre tema claro e escuro"></button>
+
+        <svg class="icone icone-lua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <header class="topo">
+    <div class="container">
+      <a class="logo" href="index.html#inicio">ALFA<span class="ponto" aria-hidden="true"></span></a>
+      <nav aria-label="Principal">
+        <a href="index.html#proposta">Proposta</a>
+        <a href="index.html#quem-faz">Quem faz</a>
+        <a href="contato.html" aria-current="page">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="manchete">
+      <div class="container manchete-grade">
+
+        <article class="principal">
+          <h1>Conte para a gente como está o seu negócio</h1>
+          <p class="linha-fina">Preencha o formulário. Rodrigo e Vinicius analisam as informações e respondem pelo WhatsApp.</p>
+
+          <form id="form-contato" class="formulario" novalidate>
+
+            <fieldset>
+              <legend class="secao">Sobre a empresa</legend>
+
+              <div class="campo">
+                <label for="empresa">Nome da empresa</label>
+                <input id="empresa" name="empresa" type="text" autocomplete="organization" required aria-describedby="erro-empresa">
+                <p class="erro" id="erro-empresa" hidden></p>
+              </div>
+
+              <div class="duas-colunas">
+                <div class="campo">
+                  <label for="cnpj">CNPJ</label>
+                  <input id="cnpj" name="cnpj" type="text" inputmode="numeric" placeholder="00.000.000/0000-00" maxlength="18" required aria-describedby="erro-cnpj">
+                  <p class="erro" id="erro-cnpj" hidden></p>
+                </div>
+                <div class="campo">
+                  <label for="responsavel">Seu nome</label>
+                  <input id="responsavel" name="responsavel" type="text" autocomplete="name" required aria-describedby="erro-responsavel">
+                  <p class="erro" id="erro-responsavel" hidden></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset aria-describedby="erro-motivo">
+              <legend class="secao">Motivo do contato</legend>
+              <p class="dica">Marque tudo o que se aplica ao seu negócio.</p>
+              <div class="checks">
+            <label class="check"><input type="checkbox" name="motivo" value="Falta de clientes"> <span>Falta de clientes</span></label>
+            <label class="check"><input type="checkbox" name="motivo" value="Pouco acesso no site"> <span>Pouco acesso no site</span></label>
+            <label class="check"><input type="checkbox" name="motivo" value="Pouca visita na loja"> <span>Pouca visita na loja</span></label>
+            <label class="check"><input type="checkbox" name="motivo" value="Vendas abaixo do esperado"> <span>Vendas abaixo do esperado</span></label>
+            <label class="check"><input type="checkbox" name="motivo" value="Dificuldade em controlar o fluxo de caixa"> <span>Dificuldade em controlar o fluxo de caixa</span></label>
+            <label class="check"><input type="checkbox" name="motivo" value="Gastos acima do previsto"> <span>Gastos acima do previsto</span></label>
+            <label class="check"><input type="checkbox" name="motivo" value="Falta de organização financeira"> <span>Falta de organização financeira</span></label>
+            <label class="check"><input type="checkbox" name="motivo" value="Outro motivo"> <span>Outro motivo</span></label>
+              </div>
+              <p class="erro" id="erro-motivo" hidden></p>
+            </fieldset>
+
+            <fieldset>
+              <legend class="secao">Quer contar mais?</legend>
+              <div class="campo">
+                <label for="detalhes">Detalhes (opcional)</label>
+                <textarea id="detalhes" name="detalhes" rows="5"></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset aria-describedby="erro-provedores">
+              <legend class="secao">Seus provedores</legend>
+              <p class="dica">Opcional. Informe os provedores e fornecedores do seu negócio (maquininha, internet, contabilidade, etc.) para a gente poder falar com eles e buscar economia.</p>
+
+              <div id="lista-provedores"></div>
+              <p class="erro" id="erro-provedores" hidden></p>
+              <button type="button" id="add-provedor" class="botao-sec">+ Adicionar provedor</button>
+
+              <label class="check check-libera" id="bloco-libera" hidden>
+                <input type="checkbox" id="libera-provedores" name="libera-provedores">
+                <span>Libero o acesso da ALFA aos números dos provedores informados acima.</span>
+              </label>
+              <p class="erro" id="erro-libera" hidden></p>
+            </fieldset>
+
+            <fieldset>
+              <legend class="secao">Como falar com você</legend>
+              <div class="campo campo-curto">
+                <label for="whatsapp">WhatsApp</label>
+                <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 90000-0000" maxlength="15" required aria-describedby="erro-whatsapp">
+                <p class="erro" id="erro-whatsapp" hidden></p>
+              </div>
+            </fieldset>
+
+            <div class="armadilha" aria-hidden="true">
+              <label for="site">Não preencha este campo</label>
+              <input id="site" name="site" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button class="botao" id="btn-enviar" type="submit">Enviar mensagem</button>
+            <p class="erro erro-envio" id="erro-envio" role="alert" hidden></p>
+            <p class="dica">Ao enviar, sua mensagem passa por uma análise da nossa IA e chega para Rodrigo e Vinicius. Depois respondemos pelo WhatsApp.</p>
+          </form>
+
+          <div id="confirmacao" class="confirmacao" hidden tabindex="-1">
+            <h2>Mensagem enviada!</h2>
+            <p>Recebemos os dados do seu negócio. A IA já organizou as informações e Rodrigo e Vinicius vão avaliar o seu caso.</p>
+            <p>Respondemos pelo WhatsApp que você informou. Seu protocolo: <strong id="protocolo"></strong>.</p>
+            <p><a href="index.html">Voltar para a página inicial</a></p>
+          </div>
+        </article>
+
+        <aside class="lateral" aria-labelledby="titulo-como">
+          <h2 id="titulo-como" class="secao">Como funciona</h2>
+          <article>
+            <h3>Você conta</h3>
+            <p>Preenche o formulário com os dados da empresa e o que está travando o negócio.</p>
+          </article>
+          <article>
+            <h3>A gente analisa</h3>
+            <p>A IA analisa o formulário e entrega um relatório para nós. Depois avaliamos o seu caso com atenção.</p>
+          </article>
+          <article>
+            <h3>Falamos com você</h3>
+            <p>Retornamos pelo WhatsApp para conversar sobre os próximos passos.</p>
+          </article>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <span class="logo-rodape">ALFA</span>
+      <span>Finanças com IA e apoio humano. &copy; 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="form.js"></script>
+</body>
+</html>

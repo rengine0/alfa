@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALFA | Finanças com IA e apoio humano</title>
+  <meta name="description" content="A ALFA organiza suas finanças com inteligência artificial e acompanha você de perto com apoio humano.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <script>
+    try {
+      var t = localStorage.getItem('alfa-tema');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro';
+      document.documentElement.setAttribute('data-tema', t);
+    } catch (e) { document.documentElement.setAttribute('data-tema', 'claro'); }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="faixa">
+    <div class="container">
+      <span class="faixa-texto">Finanças com IA e apoio humano</span>
+
+      <div class="tema">
+
+        <svg class="icone icone-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+
+        <button id="tema-btn" class="tema-btn" type="button" role="switch" aria-checked="false" aria-label="Alternar entre tema claro e escuro"></button>
+
+        <svg class="icone icone-lua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <header class="topo">
+    <div class="container">
+      <a class="logo" href="#inicio">ALFA<span class="ponto" aria-hidden="true"></span></a>
+      <nav aria-label="Principal">
+        <a href="#proposta">Proposta</a>
+        <a href="#quem-faz">Quem faz</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="cta" id="contato">
+      <div class="container">
+        <h2>Pronto para organizar seu dinheiro?</h2>
+        <a class="botao" href="contato.html">Fale com a gente!</a>
+      </div>
+    </section>
+
+    <section class="manchete" id="inicio">
+      <div class="container manchete-grade">
+        <article class="principal">
+          <h1>Finanças com a precisão da IA e o cuidado de gente</h1>
+          <p class="linha-fina">A ALFA organiza seus números com inteligência artificial. Rodrigo e Vinicius acompanham você de perto, para que cada decisão sobre o seu dinheiro faça sentido.</p>
+          <div class="assinatura">Por Rodrigo e Vinicius</div>
+        </article>
+
+        <aside class="lateral" id="proposta" aria-labelledby="titulo-proposta">
+          <h2 id="titulo-proposta" class="secao">Nossa proposta</h2>
+          <article>
+            <h3>IA que organiza</h3>
+            <p>Classifica seus gastos, acompanha receitas e avisa quando algo foge do normal.</p>
+          </article>
+          <article>
+            <h3>Pessoas que explicam</h3>
+            <p>Revisamos os números com você e ajudamos a decidir o próximo passo.</p>
+          </article>
+          <article>
+            <h3>Um plano só seu</h3>
+            <p>Metas, orçamento e reserva montados para a sua realidade, não para uma média.</p>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+
+    <section class="quem" id="quem-faz">
+      <div class="container">
+        <h2 class="secao">Quem faz a ALFA</h2>
+        <div class="autores">
+          <article class="autor">
+            <div class="avatar" aria-hidden="true">R</div>
+            <div>
+              <h3>Rodrigo</h3>
+              <p>Cuida da tecnologia. Constrói a IA que organiza e analisa suas finanças.</p>
+            </div>
+          </article>
+          <article class="autor">
+            <div class="avatar" aria-hidden="true">V</div>
+            <div>
+              <h3>Vinicius</h3>
+              <p>Cuida do acompanhamento. Conversa com você, explica os números e ajuda a decidir.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <span class="logo-rodape">ALFA</span>
+      <span>Finanças com IA e apoio humano. &copy; 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
