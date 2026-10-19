@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: alfa
+    runtime: node
+    plan: free
+    buildCommand: echo "sem dependências para instalar"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      # Canal 1: e-mail (Resend)
+      - key: RESEND_API_KEY
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: MAIL_FROM
+        value: ALFA <onboarding@resend.dev>
+      # Canal 2: Telegram (opcional, mais simples de configurar)
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
